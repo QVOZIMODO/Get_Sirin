@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
-<img src="./assets/banner.svg" alt="Sirin — private, multi-protocol, Telegram-first VPN" width="100%" />
+<img src="./assets/banner.png" alt="Sirin — private, multi-protocol, Telegram-first VPN" width="100%" />
 
 <br/>
 

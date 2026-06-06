@@ -1,6 +1,8 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
+<img src="./assets/logo.png" alt="Sirin" width="120" />
+
 # The Sirin Manifesto
 
 *The internet should just be.*
