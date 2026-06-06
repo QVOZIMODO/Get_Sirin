@@ -1,0 +1,29 @@
+Sirin — public overview repository
+====================================
+
+This repository contains documentation, written overview material, and brand
+assets describing the Sirin service. It contains NO operational source code.
+
+Documentation and written content
+---------------------------------
+The documentation and written content in this repository (all Markdown files)
+are licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, provided you give
+appropriate credit.
+
+Trademarks and brand assets
+---------------------------
+"Sirin", the Sirin name, wordmark, and the banner and logo assets under
+`assets/` are trademarks of the Sirin team and are NOT covered by the CC BY 4.0
+license above. They may not be used to imply endorsement by, affiliation with,
+or origin from the Sirin team without written permission.
+
+No warranty
+-----------
+This material is provided "as is", without warranty of any kind. Nothing here is
+a guarantee of service behavior; the authoritative description of what the
+service does and does not do is the service itself and its published canary.

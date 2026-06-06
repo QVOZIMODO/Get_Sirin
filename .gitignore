@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Nothing operational belongs in this repo — keep it that way.
+.env
+.env.*
+*.key
+*.pem
