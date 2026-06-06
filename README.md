@@ -32,7 +32,7 @@ Automatic protocol rotation across WireGuard, AmneziaWG, VLESS + Reality and Sha
 > that claims 100% is telling the truth. What we promise is to tell you honestly what works,
 > what doesn't, and what changed.
 >
-> *The internet should just be. — [Read the full manifesto →](./MANIFESTO.md)*
+> *The internet should just be. — Read the full manifesto: [English](./MANIFESTO.md) · [Русский](./MANIFESTO.ru.md)*
 
 ---
 
@@ -233,7 +233,7 @@ actually live.
 | --- | --- |
 | 🌐 Website | **[sirin.one](https://sirin.one)** |
 | 🤖 Start in Telegram | **[@getsirin_bot](https://t.me/getsirin_bot)** |
-| 🕊️ Manifesto | **[MANIFESTO.md](./MANIFESTO.md)** |
+| 🕊️ Manifesto | **[English](./MANIFESTO.md)** · **[Русский](./MANIFESTO.ru.md)** |
 | 🔒 Security disclosure | **[sirin.one/security](https://sirin.one/security)** |
 | 🪶 Warrant canary | **[sirin.one/canary](https://sirin.one/canary)** |
 | 🛡️ Privacy policy | **[sirin.one/privacy](https://sirin.one/privacy)** |

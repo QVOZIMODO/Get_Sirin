@@ -5,6 +5,8 @@
 
 *The internet should just be.*
 
+[Русская версия →](./MANIFESTO.ru.md)
+
 </div>
 
 ---
