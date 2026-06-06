@@ -2,8 +2,8 @@
 
 Protocol diversity is the moat. A single tunnel type is a single point of failure against
 deep packet inspection — so every active Sirin user holds credentials for all four
-protocols below, and the subscription URL rotates between them automatically based on what
-is passing the filters in their region today.
+protocols below at once, and the subscription URL keeps them ranked by what is passing the
+filters in their region today, so switching when one is blocked takes seconds.
 
 ## The deck
 
@@ -38,18 +38,24 @@ encryption). Its small footprint and very broad client support make it a dependa
 fallback — when the heavier transports are under pressure or unsupported by a user's
 client of choice, Shadowsocks keeps a path open.
 
-## Why rotation, not choice
+## All four at once — and a ranked, self-refreshing list
 
-Users don't pick a protocol, and they don't manually swap when one breaks. The subscription
-URL does it for them:
+You hold credentials for all four protocols at the same time, and the subscription URL keeps
+the list fresh so switching is a one-tap affair, never a support ticket:
 
 1. The client polls the URL on its own schedule (typically every 6–24h).
 2. Sirin ranks the four protocols for the caller's region by recent, measured health.
 3. Anything currently blocked or degraded is dropped or deprioritised.
-4. The client receives a fresh, ranked config list and uses the best one.
+4. The client receives a fresh, ranked config list — pick the top one; if it's filtered,
+   the next is already in hand.
 
-The result: a protocol can die in a region and the user rotates onto another one **before
-they notice**, with no re-import, no app update, and no support ticket.
+If the available set changes (an endpoint drains, a new one comes up), the bot notifies you,
+so you're never chasing down a config.
+
+> **On the roadmap: fully automatic rotation.** Switching protocols *for* you, mid-session,
+> before you notice, requires a client that can fail over on its own — that's what the
+> dedicated Sirin app will add. Today's win is that you already carry the whole deck and a
+> always-current, health-ranked list, so a manual switch is seconds, not a ticket.
 
 ## Clients
 

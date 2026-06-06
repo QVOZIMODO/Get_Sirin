@@ -39,30 +39,34 @@ Automatic protocol rotation across WireGuard, AmneziaWG, VLESS + Reality and Sha
 ## ✦ Why Sirin is different
 
 Every other VPN hands you a static config and, when the filters escalate, a support
-ticket to get a new one. **Sirin's wedge is that rotation is automatic and invisible.**
+ticket to get a new one. **Sirin gives you all four protocols at once** — so when one is
+filtered, you switch to another in seconds instead of opening a ticket.
 
 The product you own is not a config file — it's a single long-lived **subscription URL**.
-Your client polls it on its own schedule; Sirin returns the configs that are *actually
-passing the filters in your region right now*, ranked by live health. When a protocol or
-an endpoint gets blocked, the next poll quietly routes you around it. You never re-import.
-You never open a ticket.
+Your client polls it on its own schedule; Sirin returns your configs **ranked by live
+health** for your region, and when the available set changes (an endpoint drains, a new
+one comes up) the bot tells you. You never chase down a fresh config.
 
 ```text
    ┌─────────────┐     poll every 6–24h      ┌────────────────────────┐
    │ your client │ ───────────────────────▶  │  GET /sub/{your-token} │
-   │ (v2rayNG,   │                            │  → best configs for    │
-   │  AmneziaVPN)│ ◀───────────────────────  │    your region, ranked │
+   │ (v2rayNG,   │                            │  → your configs for    │
+   │  AmneziaVPN)│ ◀───────────────────────  │    the region, ranked  │
    └─────────────┘     fresh ranked configs   │    by live health      │
                                               └────────────────────────┘
 ```
+
+> **Roadmap:** *fully automatic protocol rotation* — switching for you, mid-session, before
+> you notice — is coming with the dedicated Sirin client app. Today you get the whole deck
+> and a one-tap switch.
 
 ---
 
 ## ✦ Protocols
 
 Four protocols, because a single one is a single point of failure against deep packet
-inspection. Every active user holds credentials for all four; the service rotates between
-them automatically.
+inspection. Every active user holds credentials for all four at once — if one is filtered,
+switch to another in seconds. (Automatic switching is on the roadmap; see above.)
 
 | Protocol | What it is | Why it's in the deck |
 | --- | --- | --- |
@@ -144,7 +148,7 @@ sequenceDiagram
     loop every 6–24h, automatically
         U->>C: client polls /sub/{token}
         C->>C: rank by live regional health, drop blocked
-        C-->>U: fresh ranked configs — rotation is invisible
+        C-->>U: fresh ranked configs; bot DMs you if the set changed
     end
 ```
 
@@ -214,15 +218,16 @@ design assumes a capable one.
 
 ## ✦ Status
 
-**Open beta.** Honest about it, too — no padded server list, no invented user counts, no
-fake countdown timers. We open a region when there's real demand, and we publish what's
-actually live.
+**Pre-launch · open beta — public launch 21 June 2026.** Honest about it, too — no padded
+server list, no invented user counts, no fake countdown timers. We open a region when
+there's real demand, and we publish what's actually live (two nodes today: Amsterdam + Moscow).
 
 - ✅ Multi-protocol provisioning — all four protocols generated per user
 - ✅ Telegram bot — RU + EN, crypto + Stars payments
-- ✅ Subscription-URL rotation across a live endpoint pool
+- ✅ Subscription URL — ranked, health-aware config delivery + change notifications
 - ✅ Privacy surface — no-PII schema, app-layer encryption, signed warrant canary
-- 🟡 Health-driven rotation intelligence — expanding
+- 🟡 Health-driven ranking intelligence — expanding
+- 🟡 Automatic protocol rotation — roadmap, ships with the dedicated Sirin client app
 - 🟡 Region expansion — on real demand, not on a roadmap slide
 
 ---

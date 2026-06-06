@@ -31,10 +31,10 @@ We are a small team building a quiet tool for people who need the internet to wo
 both directions, without asking permission.
 
 **What we do.** A single Telegram bot gives you working configurations across four
-protocols — WireGuard, AmneziaWG, VLESS+Reality, Shadowsocks — rotated automatically
-based on what is passing through the filters today. You pay in crypto. You do not give us
-your name, your email, or anything you do not need to. If one protocol stops working in
-your region, another takes its place before you notice.
+protocols — WireGuard, AmneziaWG, VLESS+Reality, Shadowsocks — ranked by what is passing
+through the filters today. You pay in crypto. You do not give us your name, your email, or
+anything you do not need to. If one protocol stops working in your region, the next is
+already in your hands.
 
 **What we do not do.** We do not log your activity. We do not sell your data — because we
 do not have your data to sell. We do not promise absolutes: no security product that

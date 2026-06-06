@@ -51,7 +51,7 @@ flowchart TB
 5. The bot returns the subscription URL plus a one-shot QR for the first client install.
 6. The user's client installs the subscription URL and begins polling it on its own cadence.
 
-## Data flow — ongoing rotation
+## Data flow — ongoing ranking & refresh
 
 1. The client polls the subscription URL.
 2. The service derives the caller's region (country-level, never stored as a raw address),
@@ -60,7 +60,13 @@ flowchart TB
 3. A health-monitor worker independently runs synthetic probes against every
    (endpoint, protocol) pair on a short cadence.
 4. Those signals drive endpoint state transitions and the protocol ordering returned per
-   region — so rotation happens server-side, with no client update and no user action.
+   region — so the *list* is re-ranked server-side, with no re-import. If the available set
+   changes, the bot notifies the user.
+
+> Fully automatic, mid-session protocol *failover* (switching for the user without a manual
+> tap) is a roadmap item that ships with the dedicated Sirin client app. Today the server
+> keeps the list ranked and fresh; the user makes the final one-tap switch in a standard
+> third-party client.
 
 ## Hard rules (the load-bearing ones)
 
