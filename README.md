@@ -148,7 +148,7 @@ sequenceDiagram
     loop every 6–24h, automatically
         U->>C: client polls /sub/{token}
         C->>C: rank by live regional health, drop blocked
-        C-->>U: fresh ranked configs; bot DMs you if the set changed
+        C-->>U: fresh ranked configs — bot DMs you if the set changed
     end
 ```
 
